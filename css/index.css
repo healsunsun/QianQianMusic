@@ -1,0 +1,621 @@
+b,body,button,dd,dfn,div,dl,dt,em,fieldset,footer,form,h1,h2,h3,h4,h5,h6,header,hr,i,input,legend,li,nav,ol,p,pre,section,strong,td,textarea,th,ul,var {
+    margin: 0;
+    padding: 0;
+    /* 斜体字体改为正常 */
+    font-style: normal;
+    /* 字体不加粗 */
+    font-weight: 400;
+    -webkit-box-sizing: border-box;
+    /* css3盒子模型 */
+    box-sizing: border-box;
+  }
+  input:focus,
+  textarea:focus {
+      /* 去掉表单的蓝色边框 */
+    outline: none;
+  }
+  body {
+    font-size: 14px;
+    font-family: PingFangSC-Regular, poppin, Tahoma, Arial, sans-serif;
+    color: #333;
+    /* 字间距 */
+    letter-spacing: 1px;
+    line-height: 22px;
+    /* height: 3000px; */
+  }
+  a {
+      /* 链接取消了下划线 */
+    text-decoration: none;
+  }
+  a,
+  a:hover {
+    color: #333;
+  }
+  img {
+    border: 0;
+  }
+  ul li {
+      /* 去掉列表样式 */
+    list-style: none;
+  }
+  input,
+  textarea {
+    background: none;
+    border: none;
+  }
+
+  .icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+ }
+
+  /* 网站的头部分 */
+  header {
+      height: 134px;
+      background-color:#fff;
+  }
+  .section-inner {
+      width: 1200px;
+      height: 95px;
+      /* background-color: rgb(184, 184, 255); */
+      margin: 0 auto;
+      /* 居中 */
+  }
+  /* 网站logo部分 */
+  .logo {
+    float: left;
+    width: 127px;
+    height: 41px;
+    /* background-color:pink; */
+    margin-top: 25px;
+  }
+  .logo img {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* 主导航栏 */
+  .nav {
+    float: left;
+    margin-left: 80px;
+    margin-top: 35px;
+
+  }
+  .nav a {
+    font-size: 16px;
+    margin-right: 35px;
+    color:#848484;
+  }
+  .nav .on {
+    color: #000000;
+  }
+  .nav a:hover {
+    color:#000000;
+  }
+  /* 行内元素a尽量只设置左右的margin值 */
+  /* 搜索栏 */
+  .search-box {
+    float: left;
+    position: relative;
+    /* 父亲相对定位 */
+    
+    /* background-color: pink; */
+    margin-top: 30px;
+  }
+  .search-box input {
+    width: 300px;
+    height: 34px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    padding-left: 15px;
+
+
+  }
+  .search-box input::placeholder {
+    color: #848484;
+  }
+  .search-box i {
+    /* 子绝对定位 */
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 26px!important;
+    color: #e14260;
+    cursor: pointer;
+    /* 鼠标变成小手 */
+  }
+  /* 登录盒子 */
+  .login {
+    float: left;
+    margin: 25px 0 0 10px;
+    width: 157px;
+    overflow: hidden;
+    /* 溢出的部分隐藏 */
+    white-space: nowrap;
+    /* 让文字不换行不换行！强制一行 */
+    text-overflow: ellipsis;
+    /* 让后面的字替换成省略号ellipsis */
+  }
+  .login-img {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    /* 因为图片默认和文字的基线对齐，加上vertical-align: middle;可以让文字和图片垂直居中垂直居中对齐 */
+
+  }
+  .login-img img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* 测导航栏 */
+  .sub-nav {
+    height: 40px;
+    background-color: #fafafa;
+    text-align: center;
+
+}
+.sub-nav a {
+  font-size: 16px;
+  line-height: 40px;
+  margin: 0 35px;
+}
+.sub-nav a:hover {
+  color: #e13228;
+
+}
+.sub-nav .on {
+  color: #e13228;
+}
+.mod-main {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 30px;
+
+  /* 块级元素水平居中对齐 */
+}
+/* 热门歌单盒子 */
+.mod-hot-songlist {
+  width: 790px;
+
+  height: 565px;
+  /* background-color: #f38989; */
+  
+}
+
+
+/* 公共的标题部分 */
+.mod-title {
+  height: 38px;
+  line-height: 38px;
+  /* background-color: rgb(226, 142, 142); */
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+.mod-title .more {
+  font-size: 14px;
+  color: #9999a6;
+  margin-left:10px;
+}
+.mod-title .btns {
+  float: right;
+}
+.mod-title .btns i {
+  font-size: 23px;
+  color: #9999a6;
+  cursor: pointer;
+}
+.container-hot-songlist {
+  margin-top: 25px;
+  width: 820px;
+}
+.container-hot-songlist li {
+  float: left;
+  width: 175px;
+  height: 204px;
+  margin-right: 30px;
+  margin-bottom: 40px;
+}
+.container-hot-songlist li a {
+  /* 保证我们的a 和li一样大 */
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.container-hot-songlist li a:hover img {
+  transform: scale(1.1);
+}
+/* 鼠标经过a的时候img有变大效果，同时 缓慢变大，缓慢变大的效果加在img上面 */
+.img-box img {
+  width: 100%;
+  /* 谁做动画给谁加 */
+  transition: all .3s;}
+.img-box {
+  position: relative;
+  width: 175px;
+  height: 175px;
+  overflow: hidden;
+}
+.img-box .play {
+  /* 刚开始这个按钮是看不见的 opactiy透明度 */
+  opacity: 0;
+  /* 定位的盒子不能通过margin: 0 auto水平居中 ：通过以下方法水平居中，垂直居中*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* margin-left: -20px;
+  margin-top: -20px; */
+  transform: translate(-50%, -50%);
+  /*用位移写法，可以避免自己的高度宽度是奇数的问题， 中间的图标在正中心，
+  需要移动一点点等价于上面的代码，左移和上移自己宽度的一半 */
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  /* 背景是黑色半透明的盒子 */
+  background: rgba(0,0,0, .4);
+    /* 谁做动画给谁加 */
+    transition: all .5s;
+
+}
+.container-hot-songlist li a:hover .play {
+  opacity: 1;
+  transform: translate(-50%, -50%)  scale(1.5);
+  /* 在这里必须再写一遍位移，否则scale会覆盖掉之前的transform*/
+}
+.img-box .play i {
+  color: #fff;
+  font-size: 20px;
+}
+
+
+.container-hot-songlist li h3 {
+  font-size: 14px;
+  transition: all .3s;
+  margin-top: 10px;
+}
+.container-hot-songlist li a:hover h3 {
+  font-weight: 700;
+}
+/* 分类听歌 */
+.mod-tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* 只有定位有这种写法 */
+  width: 350px;
+  height: 291px;
+  /* background-color: rgb(134, 241, 224); */
+}
+.mod-tag-box {
+  width: 370px;
+  /* background-color: rgb(186, 213, 245); */
+}
+.mod-tag-box a {
+  display: block;
+  width: 106px;
+  height: 42px;
+  border: 1px solid #e2e2e2;
+  border-radius: 21px;
+  line-height: 42px;
+  text-align: center;
+  transition: all .2s;
+  /* 谁做动画给谁加，阴影的缓慢变化 */
+}
+.mod-tag-box a:hover {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+
+}
+
+
+.mod-tag-box h3 {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+/* 推荐电台 */
+.mod-fm {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 350px;
+  height: 253px;
+  /* background-color: rgb(236, 234, 114); */
+}
+.mod-fm-box {
+  width: 385px;
+  /* background-color: rgb(243, 179, 179); */
+}
+.mod-fm-box li {
+  float: left;
+  width: 50px;
+  height: 95px;
+  margin-right: 45px;
+  /* background-color: #5b9400; */
+}
+.mod-fm-box li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.mod-fm-box li .icons {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(202, 101, 101);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+
+}
+.mod-fm-box li .icons i {
+  font-size: 25px;
+  color: #fff;
+}
+.mod-fm-box li h4 {
+  font-size: 14px;
+  white-space: nowrap;
+  /* 保持在同一行 */
+margin-top: 10px;
+text-align: center;
+}
+.mod-rank {
+  width: 1200px;
+  margin: 0 auto;
+  /* 让标准流的盒子（还没有加浮动和定位的）居中对齐 */
+}
+.mod-rank-box {
+  height: 540px;
+  width: 1230px;
+  /* 每个盒子的间隔是30px，要给大盒子多30px才可以不用处理第三个盒子左边距的问题 */
+  /* background-color: aqua; */
+}
+.mod-rank-box ul li {
+  float: left;
+  margin-right: 30px;
+  width: 380px;
+  height: 544px;
+  /* background-color: rgb(248, 223, 223); */
+}
+.mod-rank-box ul li h2 {
+  height: 66px;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 66px;
+  padding-left: 20px;
+  /* 字没有盒子，想把它往右移动，用padding */
+  background-color: #eef4e5;
+  color: #5b9400;
+
+}
+.rank-news {
+  border: 1px solid #cddfb2;
+}
+.rank-news:nth-child(2) {
+  border: 1px solid #db5800;
+} 
+.rank-news:nth-child(3) {
+  border: 1px solid #21bfa6;
+} 
+.arrow {
+  float: right;
+  width: 30px;
+  height: 30px;
+line-height: 30px;
+
+  margin: 20px;
+  background-color:#5b9400;
+text-align: center;
+}
+.rank-news .arrow i {
+  color: #fff;
+  font-size: 20px;
+}
+.rank-list-item {
+  height: 68px;
+  padding: 10px 10px 10px 20px;
+
+}
+.rank-list-item:hover {
+  background-color: #fafafa;
+}
+.rank-list-item span {
+  float: left;
+  color:#5b9400;
+  font-size: 18px;
+  font-weight: 700;
+  
+}
+.rank-list-item a  {
+  float: left;
+  margin-left: 10px;
+}
+.rank-list-item a img {
+width: 50px;
+}
+.rank-list-item .info {
+  float: left;
+  margin-left: 10px;
+}
+
+.rank-list-item .info h4 {
+  color: #999999;
+}
+.rank-list-item:hover .info h4 {
+  color: #000000;
+}
+.rank-list-item:hover .info h3 {
+ font-weight: 700;
+}
+.rank-list-item .tool-bar {
+  opacity: 0;
+  float: left;
+  margin-left: 50px;
+  margin-top: 12px;
+  color:#909090;
+  font-size: 24px;
+}
+.rank-list-item .tool-bar .icon:hover {
+  color: #484848;
+}
+/* .rank-list-item .tool-bar  .bofang {
+  font-size: 29px;
+} */
+/* .rank-list-item .tool-bar svg:nth-child(1){
+  font-size: 23px;
+  color:#8f8f8f;
+}.rank-list-item .tool-bar svg:nth-child(2){
+  font-size: 25px;
+  color:#8f8f8f;
+} */
+.rank-list-item:hover .tool-bar{
+  opacity: 1;
+}
+.rank-more {
+  text-align: right;
+  margin-top: 10px;
+}
+
+footer {
+  background-color: #262632;
+  height: 433px;
+  margin-top: 50px;
+}
+.footer-inner {
+  width: 1200px;
+  margin: 0 auto;
+}
+.footer-inner-top {
+  padding-top: 60px;
+  width: 1300px;
+  height: 200px;
+  /* background-color: rgb(238, 204, 204); */
+}
+.footer-inner-top .mod {
+  width: 425px;
+  float: left;
+}
+.footer-inner-top .mod h2 {
+  font-style: 18px;
+  margin-bottom: 60px;
+  color: #fff;
+}
+.download ul {
+  margin-left: -25px;
+}
+.download ul li {
+  float: left;
+  width: 92px;
+  height: 73px;
+  /* background-color: rgb(248, 209, 209); */
+  text-align: center;
+  color: #939393;
+}
+.download ul li svg{
+  font-size: 35px;
+  line-height: 35px;
+  color: #939393;
+}
+.download ul li span {
+  display: block;
+  margin-top: 22px;
+  
+}
+.about a {
+  margin: 0;
+  padding: 0;
+  float: left;
+  display: block;
+  width: 113px;
+  height: 48px;
+  line-height: 14px;
+  font-size: 14px;
+  color: #939393;
+  /* background-color: rgb(253, 207, 207); */
+}
+.about a:hover {
+  font-weight: 700;
+}
+.notice-box {
+  
+  width: 350px;
+  height:85px;
+  /* background-color: #fff; */
+ 
+}
+.notice a {
+  float: left;
+}
+.notice a .suixinting {
+  width: 296px;
+height: 32px;
+  float: left;
+  line-height: 30px;
+  /* background-color: rgb(109, 235, 228); */
+ 
+}
+.notice a svg {
+  vertical-align: middle;
+  font-size: 32px;
+  color: #939393;
+  /* float: left; */
+
+}
+.notice a .suixinting span {
+  /* float: left; */
+  margin-left: 10px;
+  width: 80px;
+  height: 30px;
+  color: #939393;
+  /* background-color: #fff; */
+}
+.weibo {
+  width: 121px;
+  height: 32px;
+  margin-right: 54px;
+  margin-top: 19px;
+  /* background-color: rgb(255, 113, 113); */
+}
+.notice a .weibo span {
+  /* float: left; */
+  margin-left: 10px;
+  width: 80px;
+  height: 30px;
+  color: #939393;
+  /* background-color: #fff; */
+}
+.footer-inner-bottom {
+  text-align: center;
+  margin-top: 50px;
+  line-height: 50px;
+  color: #939393;
+  font-size: 14px;
+}
+/* 轮播图 */
+.foucs {
+  width: 1200px;
+  margin: 0 auto 40px;
+}
+.foucs-container {
+  height: 225px;
+  /* background-color: rgb(223, 142, 142); */
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 14px;
+  
+}
+.swiper-slide img {
+  width: 175px;
+}
